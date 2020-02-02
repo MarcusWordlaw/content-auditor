@@ -83,21 +83,19 @@ Vagrant.configure("2") do |config|
     user_interface.vm.network "private_network", ip: "172.16.1.101"
     user_interface.vm.provision "shell", inline: <<-EOS
 
+      # cd /vagrant/content-auditor-frontend
+      # apt install -y docker.io
+      # systemctl start docker
+      # docker build .
+      apt-get install -y npm
+      npm install pm2 -g
+      npm i -g --unsafe-perm=true --allow-root truffle
       cd /vagrant/content-auditor-frontend
-      apt install -y docker.io
-      systemctl start docker
-      docker build .
-      # apt-get install -y npm
-      # npm install pm2 -g
-      # npm i -g --unsafe-perm=true --allow-root truffle
-      # cd /vagrant/content-tracker-frontend
-      # npm install
-      # truffle compile
-      # truffle migrate --network quickstartWallet
-      # cd client/
-      # rm -R package-lock.json
-      # npm install
-      # pm2 start node_modules/react-scripts/scripts/start.js
+      npm install
+      truffle compile
+      truffle migrate --network quickstartWallet --reset --compile-all
+      cd client/
+      pm2 start node_modules/react-scripts/scripts/start.js
 
       
     EOS
