@@ -1,0 +1,7 @@
+I've deployed my contract to the rinkeby testnet:
+
+The address: 0x3533b4D3600879B830b7837819F55B69fc3F6cdc
+
+Transaction: 
+
+https://rinkeby.etherscan.io/tx/0xdac9e5db9b1054c895ec82652e9c0c8f1d8ef7d8ad9bd28b20e46ada44f67d71

@@ -14,8 +14,24 @@ contract TestContentTracking {
     bool expected = true;
     Assert.equal(contentTracking.newDocument("test"), expected, "It should store the test value on the Blockchain.");
   }
+  function testIntegerData() public {
+    ContentTracking contentTracking = ContentTracking(DeployedAddresses.ContentTracking());
 
-  function testDoesNotContainsBlockchainData() public {
+    contentTracking.storeDocument("1234");
+
+    bool expected = true;
+    Assert.equal(contentTracking.newDocument("test"), expected, "It should store the test value on the Blockchain.");
+  }
+  function testSymbolData() public {
+    ContentTracking contentTracking = ContentTracking(DeployedAddresses.ContentTracking());
+
+    contentTracking.storeDocument("(*#@!");
+
+    bool expected = true;
+    Assert.equal(contentTracking.newDocument("test"), expected, "It should store the test value on the Blockchain.");
+  }
+
+  function testDoesNotContainBlockchainData() public {
     ContentTracking contentTracking = ContentTracking(DeployedAddresses.ContentTracking());
 
     bool expected = false;
