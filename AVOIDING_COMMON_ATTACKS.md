@@ -1,2 +1,3 @@
-Avoiding Common Attacks
+### Avoiding Common Attacks
+---
 The largest tool I used to avoid common attacks was to create contracts that did not handle ether, removing the desire for monetary gain defeats the need for intense security scrutiny and more focus can be paid on functionality and rigidiy. I also  avoided state changes after call functions. Marked visibility in my functions and avoided using deprecated solidity functions.
