@@ -1,6 +1,6 @@
 # Content Auditor Blockchain App
 
-##Objective
+## Objective
 **The purpose of this project is to demo the ability for cross organizational data to utilize Blockchain as an audit layer. The system shows how an administrator can be alerted to information that was modified.**
 
 ---
