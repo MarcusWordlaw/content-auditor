@@ -1,42 +1,64 @@
-# provenance-react-app
+#Content Auditor Blockchain App
 
-# The purpose of this project is to demo the ability for cross organizational data to utlize Blockchain as an audit layer. The system shows how an administrator can be alerted to information that was modified.
+##Objective
+**The purpose of this project is to demo the ability for cross organizational data to utilize Blockchain as an audit layer. The system shows how an administrator can be alerted to information that was modified.**
 
-# Requirements
-### Vagrant, Nodejs, NPM, Virtualbox, metamask
+---
+###Project Requirements
+- Vagrant
+- Nodejs
+- NPM
+- Metamask
 
- https://youtu.be/0d8BT1cVY2Q
+---
+###Project Setup
+Because there are issues with NPM’s shared folders in Vagrant first you must cd into the content auditor frontend and install all packages And then cd into the client folder and install all packages, steps below:
 
-
-0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63
-
-Because there are issues with NPM’s shared folders in Vagrant first you must cd into the content auditor frontend and install all packages
-And then cd into the client folder and install all packages, steps below:
-
-(Later I will docker the client application so users can simply run vagrant up)
-
+*(Later I will docker the client application so users can simply run vagrant up)*
+``` javascript
 cd content-auditor-frontend
-npm install --save truffle-hdwallet-provider@web3-one
-Npm install —ignore-optional
-truffle compile
-truffle migrate --network quickstartWallet
-Cd client
-Nom install —ignore-optional
+npm install
 
-To run demo
-Vagrant up hyplerledger
-Vagrant up api
-Vagrant up user_interface
+cd client
+npm install
+// If npm install doesn’t work, remove package-lock.json file and rerun npm install 
+```
 
-To view the tests: vagrant ssh user_interface
-Cd /vagrant/content-auditor/frontend 
-Truffle test —network quickstartWallet
+**New terminal**
+
+``` javascript
+vagrant up hyperledger
+```
+
+**Setup Metamask**
+
+- Custom RPC: http://172.16.1.102:8545
+
+- Import account with private key: 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63
+
+**New terminal**
+``` javascript
+vagrant up api
+```
+
+**New terminal**
+``` javascript
+vagrant up user_interface
+```
 
 
-Tests: The tests ensure that data is correctly being hashed on the blockchain, and that the function returns the right true / false for all data types hashed on the blockchain.
+**Check endpoints** 
+- Hyperledger: http://172.16.1.102:32768/
+- Rails api: http://172.16.1.100:3000/
+- React UI: http://172.16.1.101:3000/login
 
+##Tests
+**To view the tests:**
+``` javascript
+//While vagrant user_interface is running
+ vagrant ssh user_interface
+ cd /vagrant/content-auditor/frontend
+ truffle test —network quickstartWallet
+```
 
-Design pattern Decisions
-
-Avoiding Common Attacks
-The largest tool I used to avoid common attacks was to create contracts that did not handle ether, removing the desire for monetary gain defeats the need for intense security scrutiny and more focus can be paid on functionality and rigidiy. I also  avoided state changes after call functions. Marked visibility in my functions and avoided using deprecated solidity functions.
+**Tests:**  The tests were written to ensure that data is correctly being hashed on the blockchain, and that the function returns the right true / false for all data types hashed on the blockchain.
