@@ -6,28 +6,17 @@
 ---
 ### Project Requirements
 - Vagrant
-- Nodejs
-- NPM
 - Metamask
 - Chrome / Firefox browser
 
 ---
 ### Project Setup
-Because there are issues with NPM’s shared folders in Vagrant first you must cd into the content auditor frontend and install all packages And then cd into the client folder and install all packages, steps below:
 
-*(Later I will docker the client application so users can simply run vagrant up)*
-``` javascript
-cd content-auditor-frontend
-npm install
-
-cd client
-npm install
-// If npm install doesn’t work, remove package-lock.json file and rerun npm install 
-```
 
 **New terminal**
 
 ``` javascript
+// Create a Hyperledger VM instance
 vagrant up hyperledger
 ```
 
@@ -42,18 +31,20 @@ vagrant up hyperledger
 - Import account with private key: 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63
 
 **New terminal**
+// Create a Rails API w/postgresql VM instance
 ``` javascript
 vagrant up api
 ```
 
 **New terminal**
 ``` javascript
+// Create a UI VM instance
 vagrant up user_interface
 ```
 
 
 **Check endpoints** 
-- Hyperledger: http://172.16.1.102:32768/
+- Hyperledger Block Explorer: http://172.16.1.102:32768/
 - Rails api: http://172.16.1.100:3000/
 - React UI: http://172.16.1.101:3000/login
 
