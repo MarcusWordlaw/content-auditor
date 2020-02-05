@@ -76,7 +76,7 @@ Vagrant.configure("2") do |config|
       gem install pg -v '1.2.0'
       gem install bundler
 
-      cd /vagrant/content-tracker-backend/
+      cd /vagrant/content-auditor-backend/
       cp pg_hba.conf /etc/postgresql/11/main/pg_hba.conf
       sudo -u vagrant bundle
       systemctl start postgresql
@@ -109,7 +109,7 @@ Vagrant.configure("2") do |config|
       npm install -g yarn
       npm install pm2 -g
       npm i -g --unsafe-perm=true --allow-root truffle
-      cd /vagrant/content-tracker-frontend
+      cd /vagrant/content-auditor-frontend
       yarn --ignore-optional 
       yarn add @truffle/hdwallet-provider
       truffle compile

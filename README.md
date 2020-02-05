@@ -36,7 +36,7 @@ vagrant up hyperledger
 - create wallet
 - create a password
 - In the upper right corner drop down the "Main Ethereum Network" tab and select "Custom RPC"
-- Create a newtwork name
+- Create a network name
 - In New RPC URL Add: http://172.16.1.102:8545
 - In the upper right corner click your avatar and select import account
 - Import account with private key: 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63
@@ -62,7 +62,7 @@ vagrant up user_interface
 ``` javascript
 //While vagrant user_interface is running
  vagrant ssh user_interface
- cd /vagrant/content-auditor/frontend
+ cd /vagrant/content-auditor-frontend
  truffle test —network quickstartWallet
 ```
 
