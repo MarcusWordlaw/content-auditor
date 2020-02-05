@@ -9,6 +9,7 @@
 - Nodejs
 - NPM
 - Metamask
+- Chrome / Firefox browser
 
 ---
 ### Project Setup
@@ -31,9 +32,13 @@ vagrant up hyperledger
 ```
 
 **Setup Metamask**
-
-- Custom RPC: http://172.16.1.102:8545
-
+- Add metamask extension at https://metamask.io/
+- create wallet
+- create a password
+- In the upper right corner drop down the "Main Ethereum Network" tab and select "Custom RPC"
+- Create a newtwork name
+- In New RPC URL Add: http://172.16.1.102:8545
+- In the upper right corner click your avatar and select import account
 - Import account with private key: 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63
 
 **New terminal**
