@@ -1,7 +1,7 @@
 # Content Auditor Blockchain App
 
 ## Objective
-**The purpose of this project is to demo the ability for cross organizational data to utilize Blockchain as an audit layer. The system shows how an administrator can be alerted to information that was modified.**
+**This project demo's the ability for cross organizational data to utilize Blockchain as an audit layer. The system displays how an organization's administrator can be alerted to the inclusion of modified or malicious data.**
 
 ---
 ### Project Requirements
@@ -59,7 +59,7 @@ vagrant up user_interface
 
 ### Design Considerations
 
-My design is focused around an MVP for a content audit system utilizing Blockchain, the below photograph details the architecture. A hack of the system to simulate false messages can be done by using a curl command to post in the terminal.
+The design is focused around an MVP for a content audit system utilizing Blockchain, the below photograph details the architecture. A hack of the system to simulate false messages can be done by using a curl command to post in the terminal.
 
 ```javascript
 //Example http post request
