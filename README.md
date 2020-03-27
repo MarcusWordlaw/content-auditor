@@ -50,6 +50,10 @@ vagrant up user_interface
 - Rails api: http://172.16.1.100:3000/
 - React UI: http://172.16.1.101:3000/login
 
+**To Login as Administrator** 
+- Username: admin@consensys.com
+- Password: 1234
+
 ## Tests
 **To view the tests:**
 ``` javascript
