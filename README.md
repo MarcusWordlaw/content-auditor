@@ -5,9 +5,11 @@
 
 ---
 ### Project Requirements
+- VirtualBox
 - Vagrant
-- Metamask
 - Chrome / Firefox browser
+- Metamask
+
 
 ---
 ### Project Setup
@@ -57,7 +59,7 @@ vagrant up user_interface
  truffle test —network quickstartWallet
 ```
 
-### Design Considerations
+### Design & System Architecture
 
 The design is focused around an MVP for a content audit system utilizing Blockchain, the below photograph details the architecture. A hack of the system to simulate false messages can be done by using a curl command to post in the terminal.
 
