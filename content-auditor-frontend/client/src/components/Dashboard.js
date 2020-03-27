@@ -11,24 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import Orders from './Orders';
-// import Box from '@material-ui/core/Box';
-// import Link from '@material-ui/core/Link';
-// import Badge from '@material-ui/core/Badge';
-// import NotificationsIcon from '@material-ui/icons/Notifications';
 
-
-// function Copyright() {
-//   return (
-//     <Typography variant="body2" color="textSecondary" align="center">
-//       {'Copyright © '}
-//       <Link color="inherit" href="https://material-ui.com/">
-//         Blockchain Content Tracker
-//       </Link>{' '}
-//       {new Date().getFullYear()}
-//       {'.'}
-//     </Typography>
-//   );
-// }
 
 const drawerWidth = 240;
 
@@ -56,11 +39,6 @@ const useStyles = makeStyles(theme => ({
   appBarShift: {
     marginLeft: drawerWidth,
     width: '100%'
-    // `calc(100% - ${drawerWidth}px)`,
-    // transition: theme.transitions.create(['width', 'margin'], {
-    //   easing: theme.transitions.easing.sharp,
-    //   duration: theme.transitions.duration.enteringScreen,
-    // }),
   },
   menuButton: {
     marginRight: 36,
@@ -136,11 +114,6 @@ const Dashboard = (props) => {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             Blockchain Content Tracker
           </Typography>
-          {/* <IconButton color="inherit">
-            <Badge badgeContent={3} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton> */}
             <div>
                 <button onClick={() => {
                 const history = props.history
@@ -166,9 +139,6 @@ const Dashboard = (props) => {
               </Paper>
             </Grid>
           </Grid>
-          {/* <Box pt={4}>
-            <Copyright />
-          </Box> */}
         </Container>
       </main>
     </div>

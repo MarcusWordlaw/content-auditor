@@ -64,6 +64,7 @@ class Orders extends Component {
     postHashedDocumentABI = async () => {
       const { accounts, contract } = this.props;
       const { document } = this.state;
+
       //Invoking set method in content tracking contract to post document to blockchain
       await contract.methods.storeDocument(document).send({ from: accounts[0] });
   
@@ -125,6 +126,8 @@ class Orders extends Component {
             docBoolArray: docCheck
         })
     }
+
+    //Refactor conditional rendering later
     render() {
         let docList = <tr><td>Add</td><td>Doc</td></tr>;
         let organizationName;
@@ -156,7 +159,6 @@ class Orders extends Component {
                             <TableCell>Content</TableCell>
                             <TableCell>Hashed Message</TableCell>
                             <TableCell>Authentic?</TableCell>
-                            {/* <TableCell align="right">Sale Amount</TableCell> */}
                         </TableRow>
                         </TableHead>
                         <TableBody>
